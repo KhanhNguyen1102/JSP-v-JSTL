@@ -26,7 +26,7 @@
       </tr>
       <tr>
         <td>Price: </td>
-        <td>${requestScope["product"].getEmail()}</td>
+        <td>${requestScope["product"].getPrice()}</td>
       </tr>
       <tr>
         <td>Description: </td>
