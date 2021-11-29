@@ -1,22 +1,19 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: susu
   Date: 29/11/2021
-  Time: 3:07 CH
+  Time: 11:22 CH
   To change this template use File | Settings | File Templates.
 --%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Product List</title>
+    <title>Kết quả tìm kiếm</title>
 </head>
 <body>
-<h1>Products</h1>
-<p>
-    <a href="/ProductServlet?action=create">Create new product</a> <br>
-    <a href="/ProductServlet?action=findByName">Find a product</a>
-</p>
+<h1>Kết quả tìm kiếm</h1>
+<a href="/ProductServlet"> Quay lại trang chủ</a>
 <table border="1">
     <tr>
         <td>Name</td>
@@ -26,7 +23,7 @@
         <td>Edit</td>
         <td>Delete</td>
     </tr>
-    <c:forEach items='${requestScope["products"]}' var="product">
+    <c:forEach items='${result}' var="product">
         <tr>
             <td><a href="/ProductServlet?action=view&id=${product.getId()}">${product.getName()}</a></td>
             <td>${product.getPrice()}</td>
