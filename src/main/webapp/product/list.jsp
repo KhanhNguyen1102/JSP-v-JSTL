@@ -34,6 +34,8 @@
             <td>${product.getSupplier()}</td>
             <td><a href="/ProductServlet?action=edit&id=${product.getId()}">edit</a></td>
             <td><a href="/ProductServlet?action=delete&id=${product.getId()}">delete</a></td>
+            <td><a onclick="return confirm('Are you sure?')" href="/ProductServlet?action=delete1&id=${product.getId()}">delete1</a></td>
+
         </tr>
     </c:forEach>
 </table>
